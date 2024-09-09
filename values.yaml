@@ -4,6 +4,7 @@
 
 
 conf:
+  transport_url:
   keystone:
     auth_url:
     username: varroa
@@ -12,7 +13,8 @@ conf:
     endpoint_id:
     region_name:
     memcached_servers: []
-
+  database:
+    connection:
 vault:
   role: k8s
   settings_secret: 'path/to/secret/in/vault'
@@ -138,3 +140,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+components:
+  mariadb: false
+  rabbitmq: false
+  memcached: false

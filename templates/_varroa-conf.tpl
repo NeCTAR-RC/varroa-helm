@@ -1,6 +1,14 @@
 {{- define "varroa-conf" }}
+[DEFAULT]
+{{- if .Values.conf.transport_url }}
+transport_url={{ .Values.conf.transport_url }}
+{{- end }}
+
 [database]
 connection_recycle_time=600
+{{- if .Values.conf.database.connection }}
+connection={{ .Values.conf.database.connection }}
+{{- end }}
 
 [oslo_messaging_rabbit]
 rabbit_ha_queues=True
