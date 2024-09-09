@@ -1,0 +1,3 @@
+{{- include "nectarlib.configmap" (list . "varroa.configmap") -}}
+{{- define "varroa.configmap" -}}
+{{- end -}}
