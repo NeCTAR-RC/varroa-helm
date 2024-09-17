@@ -10,10 +10,14 @@ vault.hashicorp.com/secret-volume-path-secrets.conf: /etc/varroa/varroa.conf.d
 vault.hashicorp.com/agent-inject-secret-secrets.conf: "{{ .Values.vault.settings_secret }}"
 vault.hashicorp.com/agent-inject-template-secrets.conf: |
   {{ print "{{- with secret \"" .Values.vault.settings_secret "\" -}}" }}
+  {{ print "{{- if .Data.data.transport_url }}" }}
   {{ print "[DEFAULT]" }}
   {{ print "transport_url={{ .Data.data.transport_url }}" }}
+  {{ print "{{- end }}" }}
+  {{ print "{{- if .Data.data.database_connection }}" }}
   {{ print "[database]" }}
   {{ print "connection={{ .Data.data.database_connection }}" }}
+  {{ print "{{- end }}" }}
   {{ print "[flask]" }}
   {{ print "secret_key={{ .Data.data.secret_key }}" }}
   {{ print "[service_auth]" }}
