@@ -11,9 +11,13 @@ connection={{ .Values.conf.database.connection }}
 {{- end }}
 
 [oslo_messaging_rabbit]
-rabbit_ha_queues=True
 ssl=True
-amqp_durable_queues=True
+rabbit_quorum_queue=true
+rabbit_transient_quorum_queue=true
+rabbit_stream_fanout=true
+
+[oslo_messaging_notifications]
+driver=messagingv2
 
 [service_auth]
 auth_url={{ .Values.conf.keystone.auth_url }}
