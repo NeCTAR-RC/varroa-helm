@@ -15,6 +15,7 @@ ssl=True
 rabbit_quorum_queue=true
 rabbit_transient_quorum_queue=true
 rabbit_stream_fanout=true
+rabbit_qos_prefetch_count=1
 
 [oslo_messaging_notifications]
 driver=messagingv2
