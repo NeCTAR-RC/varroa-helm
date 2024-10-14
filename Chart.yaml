@@ -2,7 +2,7 @@ apiVersion: v2
 name: varroa
 description: A Helm chart for varroa
 type: application
-version: 1.1.11
+version: 1.1.12
 appVersion: 0.10.0-8-g909a574
 sources:
 - https://github.com/NeCTAR-RC/varroa-helm.git
@@ -18,7 +18,7 @@ dependencies:
   repository: oci://registry-1.docker.io/bitnamicharts
   condition: components.mariadb
 - name: rabbitmq
-  version: 15.0.0
+  version: 15.0.2
   repository: oci://registry-1.docker.io/bitnamicharts
   condition: components.rabbitmq
 - name: memcached
