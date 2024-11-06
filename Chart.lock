@@ -7,12 +7,12 @@ dependencies:
   version: 1.7.8
 - name: mariadb
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 19.1.0
+  version: 19.1.2
 - name: rabbitmq
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 15.0.5
 - name: memcached
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 7.5.2
-digest: sha256:768314314c0f8a53b5fd44e8ba6d660fc9ce5a947e0afc3fc49dce185851d62f
-generated: "2024-11-04T03:09:54.309481809Z"
+digest: sha256:07e4eafafabb59f0e239339103ccba6d6fe03303f420adba8261634422db4829
+generated: "2024-11-06T03:08:24.888333526Z"
