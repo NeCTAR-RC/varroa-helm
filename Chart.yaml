@@ -2,7 +2,7 @@ apiVersion: v2
 name: varroa
 description: A Helm chart for varroa
 type: application
-version: 1.1.16
+version: 2.0.0
 appVersion: 0.11.1-2-g46de52a
 sources:
 - https://github.com/NeCTAR-RC/varroa-helm.git
@@ -11,7 +11,7 @@ dependencies:
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 2.27.2
 - name: nectarlib
-  version: 1.7.10
+  version: 3.0.0
   repository: oci://registry.rc.nectar.org.au/nectar-helm
 - name: mariadb
   version: 20.0.0
