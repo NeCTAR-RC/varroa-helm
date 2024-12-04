@@ -11,7 +11,9 @@ connection={{ .Values.conf.database.connection }}
 {{- end }}
 
 [oslo_messaging_rabbit]
+{{- if .Values.conf.oslo_messaging_rabbit.ssl }}
 ssl=True
+{{- end }}
 rabbit_quorum_queue=true
 rabbit_transient_quorum_queue=true
 rabbit_stream_fanout=true
