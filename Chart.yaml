@@ -2,8 +2,8 @@ apiVersion: v2
 name: varroa
 description: A Helm chart for varroa
 type: application
-version: 2.0.2
-appVersion: 1.0.0-1-g9b23f05
+version: 2.0.3
+appVersion: 1.0.0-2-g4aa32ec
 sources:
 - https://github.com/NeCTAR-RC/varroa-helm.git
 dependencies:
