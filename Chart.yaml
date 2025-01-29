@@ -9,7 +9,7 @@ sources:
 dependencies:
 - name: common
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 2.29.0
+  version: 2.29.1
 - name: nectarlib
   version: 3.0.0
   repository: oci://registry.rc.nectar.org.au/nectar-helm
