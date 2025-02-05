@@ -4,7 +4,7 @@ dependencies:
   version: 2.29.1
 - name: nectarlib
   repository: oci://registry.rc.nectar.org.au/nectar-helm
-  version: 3.0.1
+  version: 3.0.2
 - name: mariadb
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 20.2.2
@@ -14,5 +14,5 @@ dependencies:
 - name: memcached
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 7.6.1
-digest: sha256:ac13d6f75574866125f730490889289dee95b7f8851138ceb26e34605e5850b2
-generated: "2025-01-31T12:08:22.04369995+11:00"
+digest: sha256:6af35339b1e47aad413b93b37375f97ce49a8b368cf8369d76f475494d224ce5
+generated: "2025-02-05T03:09:14.3864345Z"
