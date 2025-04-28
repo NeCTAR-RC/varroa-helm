@@ -45,5 +45,6 @@ auth_type=password
 memcached_servers={{ join "," .Values.conf.keystone.memcached_servers }}
 {{- end }}
 service_token_roles_required=True
+service_type=security
 
 {{- end }}
