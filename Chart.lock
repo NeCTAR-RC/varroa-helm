@@ -1,7 +1,7 @@
 dependencies:
 - name: common
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 2.30.2
+  version: 2.31.1
 - name: nectarlib
   repository: oci://registry.rc.nectar.org.au/nectar-helm
   version: 3.1.1
@@ -14,5 +14,5 @@ dependencies:
 - name: memcached
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 7.8.1
-digest: sha256:b8601ca67934d59d471432adbe0cb74864817aa083b7a1a27c850067c82102fa
-generated: "2025-05-12T04:12:29.304404266Z"
+digest: sha256:76fb001c1c222f57c95cce7bd9ee2c927b08c6f1ebf1e554fa5add803e32cd22
+generated: "2025-05-14T04:09:46.861212923Z"
