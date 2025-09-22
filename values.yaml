@@ -74,6 +74,7 @@ metric:
     enabled: false
   image:
     repository: registry.rc.nectar.org.au/nectar/varroa
+  healthchecks: false
   command:
     - gunicorn
     - "--bind"
