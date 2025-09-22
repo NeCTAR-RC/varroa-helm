@@ -67,6 +67,46 @@ api:
     parentRefs:
       - name: default
 
+metric:
+  name: metric
+  port: 9001
+  apache:
+    enabled: false
+  image:
+    repository: registry.rc.nectar.org.au/nectar/varroa
+  command:
+    - gunicorn
+    - "--bind"
+    - "0.0.0.0:9001"
+    - "--access-logfile=-"
+    - "--worker-tmp-dir"
+    - "/dev/shm"
+    - "--workers"
+    - "2"
+    - "varroa.wsgi_metric:application"
+  replicaCount: 1
+  pdb:
+    enabled: false
+    minAvailable: 1
+  podAffinityPreset: ""
+  podAntiAffinityPreset: soft
+  nodeAffinityPreset:
+    type: ""
+    key: ""
+    values: []
+  affinity: {}
+  resources: {}
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 128Mi
+  ingress:
+    enabled: false
+  gateway:
+    enabled: false
+
 notification:
   name: notification
   image:
@@ -103,6 +143,13 @@ worker:
     values: []
   affinity: {}
   resources: {}
+
+
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+
 
 job:
   db_sync:

@@ -1,0 +1,3 @@
+{{- if .Values.metrics.enabled }}
+{{- include "nectarlib.openstack_api" (list $ . .Values.metric) -}}
+{{- end }}

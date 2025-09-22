@@ -1,0 +1,17 @@
+{{- if and .Values.metrics.enabled .Values.metrics.serviceMonitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "nectarlib.fullname" . }}
+  labels:
+    {{- include "nectarlib.labels" . | nindent 4 }}
+    release: prometheus
+spec:
+  endpoints:
+    - interval: 60s
+      port: http
+  selector:
+    matchLabels:
+      {{- include "nectarlib.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: metric
+{{- end }}
