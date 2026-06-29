@@ -14,7 +14,7 @@ dependencies:
   version: 4.0.2
   repository: oci://registry.rc.nectar.org.au/nectar-helm
 - name: mariadb
-  version: 23.2.4
+  version: 26.1.6
   repository: oci://registry-1.docker.io/bitnamicharts
   condition: components.mariadb
 - name: rabbitmq
