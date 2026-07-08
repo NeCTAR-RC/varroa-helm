@@ -1,18 +1,18 @@
 dependencies:
 - name: common
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 2.40.0
+  version: 2.41.0
 - name: nectarlib
   repository: oci://registry.rc.nectar.org.au/nectar-helm
   version: 4.0.2
 - name: mariadb
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 26.1.6
+  version: 26.1.8
 - name: rabbitmq
   repository: oci://registry-1.docker.io/bitnamicharts
   version: 16.0.14
 - name: memcached
   repository: oci://registry-1.docker.io/bitnamicharts
-  version: 8.6.2
-digest: sha256:d97db1faed99f686a62171cdc5fde21767167b8e59e56e5783ba05e64a0cf3e5
-generated: "2026-06-29T04:29:32.497351426Z"
+  version: 8.6.9
+digest: sha256:4f18eee9e11e0d07fb4dc4a04fc7cf84b2741ecb4e5c01dd173cdf636a0f71e6
+generated: "2026-07-08T04:28:34.221751683Z"
