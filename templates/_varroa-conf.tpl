@@ -10,6 +10,9 @@ connection_recycle_time=600
 connection={{ .Values.conf.database.connection }}
 {{- end }}
 
+[sentry]
+environment={{ .Values.conf.sentry.environment }}
+
 [oslo_messaging_rabbit]
 {{- if .Values.conf.oslo_messaging_rabbit.ssl }}
 ssl=True

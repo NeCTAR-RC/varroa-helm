@@ -17,6 +17,8 @@ conf:
     ssl: true
   database:
     connection:
+  sentry:
+    environment: production
 vault:
   role: k8s
   settings_secret: 'path/to/secret/in/vault'
