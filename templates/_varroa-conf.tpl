@@ -14,6 +14,7 @@ connection={{ .Values.conf.database.connection }}
 environment={{ .Values.conf.sentry.environment }}
 
 [oslo_messaging_rabbit]
+rabbit_transient_queues_ttl=600
 {{- if .Values.conf.oslo_messaging_rabbit.ssl }}
 ssl=True
 {{- end }}
