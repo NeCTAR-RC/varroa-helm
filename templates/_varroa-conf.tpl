@@ -3,6 +3,12 @@
 {{- if .Values.conf.transport_url }}
 transport_url={{ .Values.conf.transport_url }}
 {{- end }}
+# Expose oslo.messaging's RPC server ping endpoint so the worker
+# liveness probe (nectar-health-probe rpc-ping) can call it.
+rpc_ping_enabled=true
+# Same value varroa sets in code; stated here so external tools such
+# as nectar-health-probe see the right exchange from config alone.
+control_exchange=varroa
 
 [database]
 connection_recycle_time=600
